@@ -93,6 +93,10 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    document.title = "Wedding Wordle 🥂";
+  }, []);
+
   return (
     <div className="min-h-[100dvh] flex flex-col items-center p-4 sm:p-8 relative">
       <div className="absolute top-2 sm:top-4 right-2 sm:right-4 z-20">
