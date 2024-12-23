@@ -34,7 +34,7 @@ export function GameTile({ letter, status, animate = false, index = 0 }: GameTil
           'bg-[#24D982] border-[#24D982] text-white shadow-[0_0_10px_rgba(36,217,130,0.3)]': status === 'correct',
           'bg-[#F2D94E] border-[#F2D94E] text-white': status === 'present',
           'bg-[#2B2B2B] border-[#2B2B2B] text-white': status === 'absent',
-          'bg-[#1D2A3A] border-[#2B2B2B] hover:border-[#3B3B3B]': !status,
+          'bg-[#1D2A3A] border-[#2B2B2B] hover:border-[#3B3B3B] text-white/90': !status,
         }
       )}
       style={{
