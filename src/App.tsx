@@ -33,6 +33,10 @@ export default function App() {
   const onKey = useCallback((key: string) => {
     if (gameOver || !isGameActive) return;
 
+    if (key === 'A' && !currentGuess && guesses.length > 0) {
+      return;
+    }
+
     if (key === 'Enter') {
       if (currentGuess.length !== 5) {
         toast({
@@ -68,6 +72,8 @@ export default function App() {
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
+      e.preventDefault();
+      if (e.repeat) return;
       onKey(e.key);
     };
     window.addEventListener('keydown', handler);
